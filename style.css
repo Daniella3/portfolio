@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Shared marquee keyframes */
+@keyframes move-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes move-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes reveal {
+  0% { transform: translateY(100%); opacity: 0 }
+  100% { transform: translateY(0); opacity: 1 }
+}
+
+@media (max-width: 768px) {
+.text-responsive {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+}
+
+.text-responsive-sm {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+}
+
+/* Touch device improvements */
+@media (hover: none) {
+  .hover-effect:hover {
+    transform: none !important;
+  }
+  
+  .comic-button:active {
+    transform: translate(2px, 2px) !important;
+    box-shadow: 2px 2px 0px #ff5252 !important;
+  }
+}
+
+/* High DPI screen support */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .crisp-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Scale text to fit its container */
+.contact-scale {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-scale h1 {
+  transform: scale(var(--scale, 1));
+  transform-origin: left center;
+  white-space: nowrap;
+}
+
+/* Alternate directions */
+.animate-left {
+  animation: move-left 30s linear infinite;
+}
+.animate-right {
+  animation: move-right 30s linear infinite;
+}
+
+.animate-reveal {
+  animation: reveal 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.backdrop-blur-md {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+.comic-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  color: #f35467;
+  border: 2px solid #eb7482;
+  box-shadow: 5px 5px 0px #fda4af;
+}
+
