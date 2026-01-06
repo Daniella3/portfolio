@@ -1,5 +1,10 @@
 import { useRef } from "react";
 import { useScrollFade } from "../hooks/useScrollFade";
+import project_2 from "../assets/project_2.png";
+import book from "../assets/book.svg";
+import chat from "../assets/chat.svg";
+import food from "../assets/food.svg";
+
 
 export default function ProjectsSection() {
   const sectionRef = useRef(null);
@@ -9,7 +14,7 @@ export default function ProjectsSection() {
     <section id="project" ref={sectionRef} className="relative sm:p-8 md:p-12 lg:p-20 m-10 bg-white rounded-2xl">
       <div id="project-intro" className="mb-16" style={{ opacity: introOpacity }}>
         <img
-          src="/images/project_2.png"
+          src={project_2}
           alt="Project Intro"
           className="mx-auto w-full mt-[-30px] opacity-100 transition-opacity duration-700"
         />
@@ -36,7 +41,7 @@ export default function ProjectsSection() {
             </div>
 
             <figure className="flex-shrink-0 w-full max-w-[250px] sm:max-w-[300px] lg:max-w-[400px]">
-              <img src="/images/book.svg" alt="book_icon" className="w-full h-auto" />
+              <img src={book} alt="book_icon" className="w-full h-auto" />
             </figure>
           </div>
         </li>
@@ -62,7 +67,7 @@ export default function ProjectsSection() {
             </div>
 
             <figure className="flex-shrink-0 w-full max-w-[250px] sm:max-w-[300px] lg:max-w-[400px]">
-              <img src="/images/chat.svg" alt="chat_icon" className="w-full h-auto" />
+              <img src={chat} alt="chat_icon" className="w-full h-auto" />
             </figure>
           </div>
         </li>
@@ -89,7 +94,7 @@ export default function ProjectsSection() {
             </div>
 
             <figure className="flex-shrink-0 w-full max-w-[250px] sm:max-w-[300px] lg:max-w-[400px]">
-              <img src="/images/food.svg" alt="food_icon" className="w-full h-auto" />
+              <img src={food} alt="food_icon" className="w-full h-auto" />
             </figure>
           </div>
         </li>

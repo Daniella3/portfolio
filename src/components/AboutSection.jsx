@@ -5,7 +5,6 @@ export default function AboutSection() {
   const sectionRef = useRef(null);
   const cardsRef = useRef(null);
 
-  // Reveal on scroll (like your about IntersectionObserver)
   useInView(sectionRef, {
     onEnter: () => {
       const el = sectionRef.current;
@@ -16,7 +15,7 @@ export default function AboutSection() {
     options: { threshold: 0.1, rootMargin: "50px" },
   });
 
-  // Card interaction (hover blur/scale + keyboard focus + touch)
+
   useEffect(() => {
     const container = cardsRef.current;
     if (!container) return;

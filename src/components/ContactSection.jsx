@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useInView } from "../hooks/useInView";
+import email from "../assets/email.svg";
 
 export default function ContactSection() {
   const sectionRef = useRef(null);
@@ -66,10 +67,10 @@ export default function ContactSection() {
             WANT TO REACH OUT? HERE&apos;S HOW!
           </h2>
           <div className="flex items-center justify-center gap-3 text-white">
-            <img src="/images/email.svg" alt="email" className="w-6 h-6 md:w-8 md:h-8" />
+            <img src={email} alt="email" className="w-6 h-6 md:w-8 md:h-8" />
             <span className="font-semibold">daniella.ovbude@gmail.com</span>
           </div>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <a href="./resume.pdf" target="_blank" rel="noopener noreferrer">
             <button
               type="button"
               className="mt-6 px-6 py-2 rounded-full font-bold bg-white text-black hover:bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:text-white transition-all"
