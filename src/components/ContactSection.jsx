@@ -7,7 +7,6 @@ export default function ContactSection() {
   const titleRef = useRef(null);
   const scaleWrapRef = useRef(null);
 
-  // Reveal animation like your JS (intersecting => animate)
   useInView(sectionRef, {
     onEnter: () => {
       const title = titleRef.current;
@@ -24,7 +23,6 @@ export default function ContactSection() {
     options: { threshold: 0.3, rootMargin: "0px 0px -50px 0px" },
   });
 
-  // Fit contact text (scale based on wrapper width / scrollWidth)
   useEffect(() => {
     const container = scaleWrapRef.current;
     const h1 = titleRef.current;

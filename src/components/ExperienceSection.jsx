@@ -96,7 +96,6 @@ export default function ExperienceSection() {
   const showJob = async (index) => {
     setCardAnimating(true);
 
-    // match your delay before swapping content
     setTimeout(async () => {
       const next = jobs[index];
 
@@ -115,14 +114,11 @@ export default function ExperienceSection() {
     }, 500);
   };
 
-  // Init background for first job
   useEffect(() => {
     if (!job.intro && job.bg) updateBackground(job.bg);
     return () => clearScramble();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Arrow key navigation
   useEffect(() => {
     const onKeyDown = (e) => {
       if (e.key === "ArrowLeft" && currentIndex > 0) showJob(currentIndex - 1);
