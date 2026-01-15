@@ -7,11 +7,10 @@ export default function ExperienceSection() {
       {
         title: "Software Engineer Intern",
         bullets: [
-          "𖥔 Developed a full-stack multiplayer web app with real-time state synchronization, implementing socket-based communication for live interactions",
-          "𖥔 Built RESTful APIs and integrated third-party services to support user authentication, media handlings, and data persistence",
-          "𖥔 Created interactive UI components with dynamic state management to improve usability and responsiveness",
-          "𖥔 Implemented automated testing and deployment scripts to ensure stable releases under short iteration cycles",
-          "𖥔 Collaborated in small teams to translate feature requests into funcitonal prototypes, presenting weekly deliverables to stakeholders",
+          "𖥔 Built and deployed full-stack web applications using PHP, Python, SQL, and JavaScript, integrating client-side and server-side functionality on a Linux/Apache environment",
+          "𖥔 Designed and implemented relational databases using MySQL, writing optimized queries to support dynamic, data-driven features",
+          "𖥔 Developed REST-style backend services and server-side logic to handle authentication, data persistence, and application workflows",
+          "𖥔 Implemented responsive, interactive frontend features using modern JavaScript frameworks, improving usability and performance",
         ],
         location: "Washington University - St. Louis, MO",
         bg: ["JAN 2025", "- - - - -", "MAY 2025"],
