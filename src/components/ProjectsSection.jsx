@@ -7,7 +7,7 @@ import stage_manager from "../assets/stage-manager.svg";
 
 export default function ProjectsSection() {
   const sectionRef = useRef(null);
-  const introOpacity = useScrollFade(sectionRef, { multiplier: 4 });
+  const introOpacity = useScrollFade(sectionRef, { multiplier: 2 });
 
   return (
     <section id="project" ref={sectionRef} className="relative sm:p-8 md:p-12 lg:p-20 m-10 bg-white dark:bg-black rounded-2xl">
