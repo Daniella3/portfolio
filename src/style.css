@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
 }
+html, body {
+  overflow-x: hidden;
+}
 
 @keyframes move-left {
   0% { transform: translateX(0); }
@@ -32,9 +35,11 @@
   }
   
   .comic-button:active {
-    transform: translate(2px, 2px) !important;
-    box-shadow: 2px 2px 0px #ff5252 !important;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #ff5252;
   }
+  
+  
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -49,12 +54,6 @@
   height: 100%;
   display: flex;
   align-items: center;
-}
-
-.contact-scale h1 {
-  transform: scale(var(--scale, 1));
-  transform-origin: left center;
-  white-space: nowrap;
 }
 
 .animate-left {
@@ -86,6 +85,13 @@
   box-shadow: 5px 5px 0px #fda4af;
 }
 
+.dark .comic-button {
+  background:black; 
+  color:#fda4af;
+  box-shadow: 5px 5px 0px #881337;
+}
+
 canvas {
   display: block;
 }
+

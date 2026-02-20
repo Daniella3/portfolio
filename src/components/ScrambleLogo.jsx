@@ -49,7 +49,7 @@ export default function ScrambleLogo({ enabled = true }) {
 
   return (
     <div
-      className="text-[35px] text-black font-thin inline-block cursor-pointer select-none"
+      className="text-[35px] text-black font-thin inline-block cursor-pointer select-none dark:text-rose-200"
       style={{ fontFamily: "'Courier New', monospace" }}
       onMouseEnter={run}
       onTouchStart={run}

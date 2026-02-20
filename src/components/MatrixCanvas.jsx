@@ -2,8 +2,10 @@ import { useEffect, useRef } from "react";
 
 export default function MatrixCanvas({ className = "", fontSize = 16, frameInterval = 50 }) {
   const canvasRef = useRef(null);
-
   useEffect(() => {
+    const isDarkMode = () => 
+      document.documentElement.classList.contains("dark");
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -19,7 +21,6 @@ export default function MatrixCanvas({ className = "", fontSize = 16, frameInter
       const dpr = window.devicePixelRatio || 1;
       const rect = canvas.getBoundingClientRect();
 
-      // avoid compound scaling
       ctx.setTransform(1, 0, 0, 1, 0, 0);
 
       canvas.width = rect.width * dpr;
@@ -50,7 +51,7 @@ export default function MatrixCanvas({ className = "", fontSize = 16, frameInter
       const width = canvas.width / (window.devicePixelRatio || 1);
       const height = canvas.height / (window.devicePixelRatio || 1);
 
-      ctx.fillStyle = "rgba(255, 255, 255, 0.05)";
+      ctx.fillStyle = isDarkMode() ? "rgba(0, 0, 0, 0.1)" : "rgba(255, 255, 255, 0.05)";
       ctx.fillRect(0, 0, width, height);
 
       ctx.font = `${fontSize}px 'Courier New', monospace`;
@@ -60,11 +61,11 @@ export default function MatrixCanvas({ className = "", fontSize = 16, frameInter
         const x = i * fontSize;
         const y = drops[i] * fontSize;
 
-        ctx.fillStyle = "#CB0034";
+        ctx.fillStyle = isDarkMode() ? "#FB7185" : "#CB0034";
         ctx.fillText(heart, x, y);
 
         if (Math.random() > 0.95) {
-          ctx.fillStyle = "#000000";
+          ctx.fillStyle = isDarkMode() ? "#ffffff" : "#000000";
           ctx.fillText(heart, x, y);
         }
 
@@ -75,6 +76,14 @@ export default function MatrixCanvas({ className = "", fontSize = 16, frameInter
 
       animationId = requestAnimationFrame(draw);
     };
+
+    const observer = new MutationObserver(() => {});
+    observer.observe(document.documentElement, {
+      attributes: true, 
+      attributeFilter: ["class"], 
+    });
+
+    observer.disconnect();
 
     const ro = new ResizeObserver(() => resizeCanvas());
     if (canvas.parentElement) ro.observe(canvas.parentElement);

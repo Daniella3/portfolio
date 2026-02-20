@@ -14,12 +14,12 @@ export default function App() {
   const [ready, setReady] = useState(false);
 
   return (
-    <div className="relative bg-transparent font-mono overflow-x-hidden">
-      <MatrixCanvas className="fixed top-0 left-0 w-full h-full -z-10" />
+    <div className="relative font-mono min-h-screen bg-white dark:bg-black">
+      <MatrixCanvas className="fixed inset-0 w-full h-full z-0 pointer-events-none" />
 
       <IntroOverlay onDone={() => setReady(true)} />
 
-      <main className={`transition-opacity duration-1000 ${ready ? "opacity-100" : "opacity-0"}`}>
+      <main className={` transition-opacity duration-1000 ${ready ? "opacity-100" : "opacity-0"}`}>
         <Navbar logoEnabled={ready} />
 
         <IntroHero />

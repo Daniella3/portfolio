@@ -77,11 +77,11 @@ export default function IntroOverlay({ onDone }) {
 
   return (
     <div
-      className="fixed inset-0 flex items-center justify-center bg-white z-50"
+      className="fixed inset-0 flex items-center justify-center z-50"
       style={{ opacity, transition: "opacity 1.5s ease-in-out" }}
     >
       <MatrixCanvas className="absolute inset-0 w-full h-full -z-10" />
-      <h1 id="animatedText" className="text-6xl" style={{ fontFamily: "'Courier New', monospace" }}>
+      <h1 id="animatedText" className="text-6xl dark:text-rose-200" style={{ fontFamily: "'Courier New', monospace" }}>
         {text}
       </h1>
     </div>
