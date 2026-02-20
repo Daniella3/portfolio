@@ -41,13 +41,13 @@ export default function ProjectsSection() {
         <li className="bg-pink-100 dark:bg-[#872F55] border border-white/20 rounded-2xl shadow-lg sticky top-20">
           <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 p-6 lg:p-12">
             <div className="flex-1">
-              <h3 className="font-bold text-lg lg:text-2xl text-rose-300 dark:text-[#fda4af] mb-6">
+              <h3 className="font-bold text-lg lg:text-2xl text-rose-300 dark:text-[#2A0718] mb-6">
                 Book Discovery &amp; Tracking App
               </h3>
-              <ul className="space-y-4 text-black dark:text-[#2e0519f8] font-bold mb-8">
-                <li>𖥔 Built a book discovery hub where readers can search, explore, and get tailored recommendations.</li>
-                <li>𖥔 Designed personal lists so users can add books, track progress, and revisit favorites.</li>
-                <li>𖥔 Made the experience engaging with smart suggestions, interactive browsing, and easy list management.</li>
+              <ul className="space-y-4 text-black dark:text-[#fda4af] font-bold mb-8">
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Built a book discovery hub where readers can search, explore, and get tailored recommendations.</li>
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Designed personal lists so users can add books, track progress, and revisit favorites.</li>
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Made the experience engaging with smart suggestions, interactive browsing, and easy list management.</li>
               </ul>
               <div className="flex flex-wrap gap-3">
                 <div className="comic-button">• Google API</div>
@@ -65,13 +65,13 @@ export default function ProjectsSection() {
         <li className="bg-pink-100 dark:bg-[#872F55] border border-white/20 rounded-2xl shadow-lg sticky top-20">
           <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 p-6 lg:p-12">
             <div className="flex-1">
-              <h3 className="font-bold text-lg lg:text-2xl text-rose-300 dark:text-[#fda4af] mb-6">
+              <h3 className="font-bold text-lg lg:text-2xl text-rose-300 dark:text-[#2A0718] mb-6">
                 Spotify Virtual Hangout Web App
               </h3>
-              <ul className="space-y-4 text-black dark:text-[#2e0519f8] font-bold mb-8">
-                <li>𖥔 Created a virtual hangout where friends can char, share music, an vibe together in real time.</li>
-                <li>𖥔 Designed interactive rooms with collaborative playlists and a host-powered "DJ mode".</li>
-                <li>𖥔 Brought the experience to life with live chat, emojis, and responsive design for any device.</li>
+              <ul className="space-y-4 text-black dark:text-[#fda4af] font-bold mb-8">
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Created a virtual hangout where friends can chat, share music, and  vibe together in real time.</li>
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Designed interactive rooms with collaborative playlists and a host-powered "DJ mode".</li>
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Brought the experience to life with live chat, emojis, and responsive design for any device.</li>
               </ul>
               <div className="flex flex-wrap gap-3">
                 <div className="comic-button">• Spotify API</div>

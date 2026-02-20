@@ -31,7 +31,7 @@ export default function AboutSection() {
     });
 
     const clearAll = () => {
-      cards.forEach((c) => c.classList.remove("blur-sm", "scale-90", "scale-105", "z-10"));
+      cards.forEach((c) => c.classList.remove("blur-[2px]", "scale-90", "scale-105", "z-10"));
     };
 
     const handlers = [];
@@ -42,9 +42,9 @@ export default function AboutSection() {
         cards.forEach((c) => {
           if (c === card) {
             c.classList.add("scale-105", "z-10");
-            c.classList.remove("blur-sm", "scale-90");
+            c.classList.remove("blur-[2px]", "scale-95");
           } else {
-            c.classList.add("blur-sm", "scale-90");
+            c.classList.add("blur-[2px]", "scale-95");
             c.classList.remove("scale-105", "z-10");
           }
         });
@@ -84,14 +84,14 @@ export default function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="bg-gradient-to-r from-pink-200 to-black dark:from-black dark:to-[#872F55] sm:p-8 md:p-12 lg:p-24 m-10 rounded-2xl shadow-lg relative opacity-0 translate-y-10 transition-all duration-700"
+      className="bg-gradient-to-r from-pink-200 to-black dark:from-black dark:to-[#A34A6F] sm:p-8 md:p-12 lg:p-24 m-10 rounded-2xl shadow-lg relative opacity-0 translate-y-10 transition-all duration-700"
     >
       <div ref={cardsRef} className="cards flex flex-col md:flex-row items-start justify-between gap-8">
         <div className="card w-full md:w-1/2 bg-pink-200 dark:bg:rose-900 border-4 border-black shadow-[12px_12px_0px_#000] overflow-hidden transition-all duration-300 ease-in-out -translate-x-1.5 -translate-y-1.5 hover:-translate-x-1.5 hover:-translate-y-1.5">
-          <div className="head w-full h-8 bg-black border-b-4 border-black px-3 py-1 text-pink-200 dark:text-[#872F55] font-extrabold text-lg">
+          <div className="head w-full h-8 bg-black border-b-4 border-black px-3 py-1 text-pink-200 dark:text-[#A34A6F] font-extrabold text-lg">
             About Me
           </div>
-          <div className="dark:bg-[#872F55] content px-3 py-2 space-y-5 font-semibold text-lg">
+          <div className="dark:bg-[#A34A6F] content px-3 py-2 space-y-5 font-semibold text-lg">
             <p>
               I love crafting reliable systems, experimenting with bold UI ideas, and building projects
               that make life smoother–or just more fun!
@@ -103,8 +103,8 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <div className="card w-full md:w-1/2 bg-black text-pink-200 dark:text-[#872F55] border-4 border-pink-200 dark:border-[#872F55] shadow-[12px_12px_0px_#FBCFEB] dark:shadow-[12px_12px_0px_#872F55] overflow-hidden transition-all duration-300 ease-in-out translate-x-1.5 translate-y-10 hover:translate-x-1.5 hover:translate-y-10">
-          <div className="head w-full h-8 bg-pink-200 dark:bg-[#872F55] border-b-4 border-pink-200 dark:border-[#872F55] px-3 py-1 text-black font-extrabold text-lg">
+        <div className="card w-full md:w-1/2 bg-black text-pink-200 dark:text-[#A34A6F] border-4 border-pink-200 dark:border-[#A34A6F] shadow-[12px_12px_0px_#FBCFEB] dark:shadow-[12px_12px_0px_#A34A6F] overflow-hidden transition-all duration-300 ease-in-out translate-x-1.5 translate-y-10 hover:translate-x-1.5 hover:translate-y-10">
+          <div className="head w-full h-8 bg-pink-200 dark:bg-[#A34A6F] border-b-4 border-pink-200 dark:border-[#A34A6F] px-3 py-1 text-black font-extrabold text-lg">
             My Interests
           </div>
           <div className="content px-3 py-2 space-y-5 font-semibold text-lg">
