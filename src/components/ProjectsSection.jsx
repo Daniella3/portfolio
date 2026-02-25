@@ -44,7 +44,7 @@ export default function ProjectsSection() {
               <h3 className="font-bold text-lg lg:text-2xl text-rose-300 dark:text-[#2A0718] mb-6">
                 Book Discovery &amp; Tracking App
               </h3>
-              <ul className="space-y-4 text-black dark:text-[#fda4af] font-bold mb-8">
+              <ul className="space-y-4 text-black dark:text-rose-300 font-bold mb-8">
                 <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Built a book discovery hub where readers can search, explore, and get tailored recommendations.</li>
                 <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Designed personal lists so users can add books, track progress, and revisit favorites.</li>
                 <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Made the experience engaging with smart suggestions, interactive browsing, and easy list management.</li>
