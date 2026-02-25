@@ -51,7 +51,7 @@ export default function MatrixCanvas({ className = "", fontSize = 16, frameInter
       const width = canvas.width / (window.devicePixelRatio || 1);
       const height = canvas.height / (window.devicePixelRatio || 1);
 
-      ctx.fillStyle = isDarkMode() ? "rgba(0, 0, 0, 0.1)" : "rgba(255, 255, 255, 0.05)";
+      ctx.fillStyle = isDarkMode() ? "rgba(0, 0, 0, 0.05)" : "rgba(255, 255, 255, 0.05)";
       ctx.fillRect(0, 0, width, height);
 
       ctx.font = `${fontSize}px 'Courier New', monospace`;
