@@ -41,17 +41,37 @@ export default function ProjectsSection() {
         <li className="bg-pink-100 dark:bg-[#872F55] border border-white/20 rounded-2xl shadow-lg sticky top-20">
           <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 p-6 lg:p-12">
             <div className="flex-1">
-              <h3 className="font-bold text-lg lg:text-2xl text-rose-300 dark:text-[#2A0718] mb-6">
-                Book Discovery &amp; Tracking App
-              </h3>
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="font-bold text-lg lg:text-2xl text-rose-300 dark:text-[#2A0718]">
+                  Book Discovery & Tracking App
+                </h3>
+                <a href="https://book-discovery-and-tracking.vercel.app/search" target="_blank" rel="noopener noreferrer"
+                  className="text-rose-300 dark:text-black group flex items-center px-4 py-2 rounded-full bg-black/70 dark:bg-rose-300/70 text-sm font-bold border border-transparent transition-all duration-200 hover:bg-black/90 dark:hover:bg-rose-300 active:scale-95"
+                >
+                  <span>Visit Website</span>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 74 74"
+                    className="w-[28px] ml-2 transition-transform duration-300 ease-in-out group-hover:translate-x-[5px]"
+                  >
+                    <circle strokeWidth="3" stroke="currentColor" r="35.5" cy="37" cx="37" />
+                    <path
+                      fill="currentColor"
+                      d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                    />
+                  </svg>
+                </a>
+              </div>
               <ul className="space-y-4 text-black dark:text-rose-300 font-bold mb-8">
-                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Built a book discovery hub where readers can search, explore, and get tailored recommendations.</li>
-                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Designed personal lists so users can add books, track progress, and revisit favorites.</li>
-                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Made the experience engaging with smart suggestions, interactive browsing, and easy list management.</li>
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Created a digital reading space where users can discover books, explore details, and move from casual browsing to intentional reading.</li>
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Added personal reading tools like saved lists, reading progress, notes, and a "Choose My Next Read" dashboard to make the experience feel more thoughtful than a simple catalog.</li>
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Brought the app to production using React + Express + PostgreSQL stack, powered by Open Library and deployed with a Render + Vercel combo.</li>
               </ul>
               <div className="flex flex-wrap gap-3">
-                <div className="comic-button">• Google API</div>
-                <div className="comic-button">• MySQL</div>
+                <div className="comic-button">• Open Library API</div>
+                <div className="comic-button">• PostgreSQL</div>
                 <div className="comic-button">• React</div>
               </div>
             </div>
@@ -66,7 +86,7 @@ export default function ProjectsSection() {
           <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 p-6 lg:p-12">
             <div className="flex-1">
               <h3 className="font-bold text-lg lg:text-2xl text-rose-300 dark:text-[#2A0718] mb-6">
-                Spotify Virtual Hangout Web App
+                Spotify Virtual Hangout Web App <span className="text-black dark:text-rose-300">[IN PROGRESS]</span>
               </h3>
               <ul className="space-y-4 text-black dark:text-[#fda4af] font-bold mb-8">
                 <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Created a virtual hangout where friends can chat, share music, and  vibe together in real time.</li>
