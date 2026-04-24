@@ -65,9 +65,9 @@ export default function ProjectsSection() {
                 </a>
               </div>
               <ul className="space-y-4 text-black dark:text-rose-300 font-bold mb-8">
-                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Created a digital reading space where users can discover books, explore details, and move from casual browsing to intentional reading.</li>
-                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Added personal reading tools like saved lists, reading progress, notes, and a "Choose My Next Read" dashboard to make the experience feel more thoughtful than a simple catalog.</li>
-                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Brought the app to production using React + Express + PostgreSQL stack, powered by Open Library and deployed with a Render + Vercel combo.</li>
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Built a full-stack book discovery app that lets users search tiles, view rich book details, and explore the catalog without signing in.</li>
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Designed  authenticated reader features such as custom reading lists, progress tracking, personal notes, and dashboard insights to support long-term reading habits.</li>
+                <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Developed and deployed the app with React, Express, PostgreSQL, Open Library, Render, and Vercel, creating a polished reading experience with authentication and persistent user data.</li>
               </ul>
               <div className="flex flex-wrap gap-3">
                 <div className="comic-button">• Open Library API</div>
