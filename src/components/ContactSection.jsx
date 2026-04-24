@@ -60,7 +60,7 @@ export default function ContactSection() {
           </span>
         </div>
 
-        <a href="./Daniella_Ovbude.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="./resume.pdf" target="_blank" rel="noopener noreferrer">
           <button
             type="button"
             className="mt-6 px-6 py-2 rounded-full font-bold bg-black text-white dark:bg-white dark:text-black hover:bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 hover:text-white transition-all"
