@@ -45,7 +45,7 @@ export default function ProjectsSection() {
                 <h3 className="font-bold text-lg lg:text-2xl text-rose-300 dark:text-[#2A0718]">
                   Book Discovery & Tracking App
                 </h3>
-                <a href="https://book-discovery-and-tracking.vercel.app/search" target="_blank" rel="noopener noreferrer"
+                <a href="https://book-discovery-and-tracking.vercel.app/" target="_blank" rel="noopener noreferrer"
                   className="text-rose-300 dark:text-black group flex items-center px-4 py-2 rounded-full bg-black/70 dark:bg-rose-300/70 text-sm font-bold border border-transparent transition-all duration-200 hover:bg-black/90 dark:hover:bg-rose-300 active:scale-95"
                 >
                   <span>Visit Website</span>
