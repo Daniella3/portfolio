@@ -43,13 +43,14 @@ export default function ProjectsSection() {
             <div className="flex-1">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="font-bold text-lg lg:text-2xl text-rose-300 dark:text-[#2A0718]">
-                  Book Discovery & Tracking App
+                  Book Discovery & Tracking App <span className="text-black dark:text-rose-300">[IN REPAIR]</span>
                 </h3>
+                {/* 
                 <a href="https://book-discovery-and-tracking.vercel.app/" target="_blank" rel="noopener noreferrer"
                   className="text-rose-300 dark:text-black group flex items-center px-4 py-2 rounded-full bg-black/70 dark:bg-rose-300/70 text-sm font-bold border border-transparent transition-all duration-200 hover:bg-black/90 dark:hover:bg-rose-300 active:scale-95"
                 >
                   <span>Visit Website</span>
-
+            
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -63,6 +64,7 @@ export default function ProjectsSection() {
                     />
                   </svg>
                 </a>
+                */}
               </div>
               <ul className="space-y-4 text-black dark:text-rose-300 font-bold mb-8">
                 <li><span className="text-rose-300 dark:text-[#2A0718]">𖥔</span> Built a full-stack book discovery app that lets users search tiles, view rich book details, and explore the catalog without signing in.</li>
