@@ -2,8 +2,9 @@ import { useEffect, useRef } from "react";
 
 export default function MatrixCanvas({ className = "", fontSize = 16, frameInterval = 50 }) {
   const canvasRef = useRef(null);
+
   useEffect(() => {
-    const isDarkMode = () => 
+    const isDarkMode = () =>
       document.documentElement.classList.contains("dark");
 
     const canvas = canvasRef.current;
@@ -16,6 +17,18 @@ export default function MatrixCanvas({ className = "", fontSize = 16, frameInter
     let lastTime = 0;
 
     const heart = "♡";
+
+    const fillCanvas = (style) => {
+      const width = canvas.width / (window.devicePixelRatio || 1);
+      const height = canvas.height / (window.devicePixelRatio || 1);
+
+      ctx.fillStyle = style;
+      ctx.fillRect(0, 0, width, height);
+    };
+
+    const clearCanvasForTheme = () => {
+      fillCanvas(isDarkMode() ? "#000000" : "#ffffff");
+    };
 
     const resizeCanvas = () => {
       const dpr = window.devicePixelRatio || 1;
@@ -38,7 +51,9 @@ export default function MatrixCanvas({ className = "", fontSize = 16, frameInter
       } else if (newColumns < columns) {
         drops = drops.slice(0, newColumns);
       }
+
       columns = newColumns;
+      clearCanvasForTheme();
     };
 
     const draw = (t) => {
@@ -46,13 +61,14 @@ export default function MatrixCanvas({ className = "", fontSize = 16, frameInter
         animationId = requestAnimationFrame(draw);
         return;
       }
+
       lastTime = t;
 
-      const width = canvas.width / (window.devicePixelRatio || 1);
-      const height = canvas.height / (window.devicePixelRatio || 1);
-
-      ctx.fillStyle = isDarkMode() ? "rgba(0, 0, 0, 0.05)" : "rgba(255, 255, 255, 0.05)";
-      ctx.fillRect(0, 0, width, height);
+      fillCanvas(
+        isDarkMode()
+          ? "rgba(0, 0, 0, 0.05)"
+          : "rgba(255, 255, 255, 0.05)"
+      );
 
       ctx.font = `${fontSize}px 'Courier New', monospace`;
       ctx.textBaseline = "top";
@@ -71,19 +87,22 @@ export default function MatrixCanvas({ className = "", fontSize = 16, frameInter
 
         drops[i]++;
 
-        if (drops[i] * fontSize > height && Math.random() > 0.99) drops[i] = 0;
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.99) {
+          drops[i] = 0;
+        }
       }
 
       animationId = requestAnimationFrame(draw);
     };
 
-    const observer = new MutationObserver(() => {});
-    observer.observe(document.documentElement, {
-      attributes: true, 
-      attributeFilter: ["class"], 
+    const observer = new MutationObserver(() => {
+      clearCanvasForTheme();
     });
 
-    observer.disconnect();
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
 
     const ro = new ResizeObserver(() => resizeCanvas());
     if (canvas.parentElement) ro.observe(canvas.parentElement);
@@ -94,6 +113,7 @@ export default function MatrixCanvas({ className = "", fontSize = 16, frameInter
     return () => {
       cancelAnimationFrame(animationId);
       ro.disconnect();
+      observer.disconnect();
     };
   }, [fontSize, frameInterval]);
 
